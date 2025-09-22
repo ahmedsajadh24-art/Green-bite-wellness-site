@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+  <meta charset="UTF-8" />
+  <title>Contact Us | GreenBite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#e8fbd9;}
+    .navbar {width:100%;background:#fff;box-shadow:0 2px 8px rgba(49,182,123,.07);display:flex;align-items:center;justify-content:center;height:68px;}
+    .navbar-inner {max-width:1400px;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;}
+    .navbar-logo {display:flex;align-items:center;gap:10px;}
+    .navbar-logo img {width:34px;height:34px;}
+    .navbar-logo span {color:#24b87d;font-size:2rem;font-weight:700;}
+    .navbar-links {display:flex;gap:2vw;font-size:1.15rem;font-weight:500;}
+    .navbar-links a {color:#222;text-decoration:none;padding:13px 0;border-bottom:3px solid transparent;transition:color .17s,border-bottom .2s;}
+    .navbar-links a.active,.navbar-links a:hover {color:#24b87d;border-bottom:3px solid #2ecc90;background:#e6fff2;border-radius:6px;}
+    .outer-banner {
+      width:100%;height:230px;position:relative;background:
+      url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=987&q=80') center/cover no-repeat;
+      border-radius:0 0 40px 40px;box-shadow:0 2px 20px #b4e0ce38;display:flex;flex-direction:column;justify-content:center;align-items:center;
+    }
+    .banner-content {width:100%;text-align:center;display:flex;align-items:center;justify-content:center;height:100%;}
+    .banner-content h1 {
+      margin:0;font-size:2.7rem;font-weight:800;color:#fff;letter-spacing:2px;text-shadow:0 4px 32px #327a6244; background:rgba(38,84,78,0.27);padding:10px 34px;border-radius:18px;
+    }
+    .contact-main {max-width:1020px;margin:-60px auto 0 auto;padding:0 18px;}
+    .contact-cardwrap {
+      display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;background:#fff;
+      border-radius:34px;box-shadow:0 6px 38px #70d7b156;padding:42px 45px 30px 45px;gap:36px;z-index:2;position:relative;
+    }
+    .contact-form {flex:1;}
+    .contact-form label {font-size:1.1em;font-weight:600;color:#39b476;margin-bottom:6px;display:block;}
+    .contact-form input, .contact-form textarea {
+      width:100%;padding:12px 16px;margin-bottom:16px;font-size:1em;border:1.5px solid #c1efd7;border-radius:8px;background:#f7fff7;transition:border-color .18s, box-shadow .18s;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {border-color:#48c98b;background:#eafcee;outline:none;}
+    .contact-form textarea {min-height:70px;resize:vertical;}
+    .contact-form button {
+      background:linear-gradient(120deg,#2ecc90 40%,#72e3b4 100%);
+      color:#fff;border:none;font-size:1.13em;font-weight:700;padding:14px 38px;border-radius:12px;cursor:pointer;box-shadow:0 2px 10px #37b07c38;
+      margin-top:4px;
+    }
+    .contact-form button:hover {
+      background:linear-gradient(120deg,#19a86b 38%,#4ee59a 100%);
+      box-shadow:0 6px 20px #10eea388;
+    }
+    .contact-map {flex:1;min-width:260px;display:flex;flex-direction:column;gap:10px;}
+    .map-frame {width:100%;height:220px;border:0;border-radius:13px;box-shadow:0 8px 34px #4fc38b12;}
+    .map-caption {font-size:1em;color:#437859;margin-top:6px;font-weight:600;display:block;text-align:center;}
+    @media (max-width:900px){
+      .contact-cardwrap{flex-direction:column;align-items:center;padding:23px 12px 16px 12px;}
+      .banner-content h1 {font-size:2.1em;}
+      .contact-main{margin:-28px auto 0 auto;}
+    }
+    .faq-section {max-width:1020px;margin:34px auto 0 auto;border-radius:18px;overflow:hidden;}
+    .faq-title {font-size:2em;margin-bottom:12px;font-weight:700;color:#26b37d;}
+    .faq-item {background:#6dc796dd;color:#fff;padding:18px 22px;margin-bottom:13px;font-size:1.18em;border-radius:12px;}
+    .faq-question {font-weight:bold;}
+    .faq-answer {margin-top:7px;}
+    .main-footer {
+      background: linear-gradient(120deg,#54af7d 70%,#2e8b56 100%);
+      color: #fff;text-align: center;
+      padding: 2em 1em 1em 1em;
+      margin-top: 3.2em;
+      border-top-left-radius: 32px;
+      border-top-right-radius: 32px;
+    }
+    .footer-content { max-width: 900px; margin: auto; }
+    .footer-logo { height:34px; vertical-align:middle; margin-right:8px; }
+    .footer-title { font-size:1.3em; font-weight:bold; }
+    .newsletter-form {margin:1em auto 0 auto;display:inline-block;}
+    .newsletter-form input[type="email"] {padding:0.7em;border:none;border-radius:6px 0 0 6px;font-size:1em;}
+    .newsletter-form button {padding:0.7em 1.3em;border:none;border-radius:0 6px 6px 0;background:#309458;color:#fff;font-weight:bold;cursor:pointer;margin-left:-2px;}
+    .newsletter-form button:hover {background:#196e44;}
+    .sign-in-footer {margin-top:1.2em;font-size:1em;}
+    .footer-link {color:#fff; margin-right:12px;text-decoration:underline;}
+    .footer-link:hover {color:#c3ffef;}
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="navbar-logo">
+        <img src="favicon.png" alt="GreenBite Logo" />
+        <span>GreenBite</span>
+      </div>
+      <div class="navbar-links">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="workout.html">Workout</a>
+        <a href="mindfulness.html">Mindfulness</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="outer-banner">
+    <div class="banner-content">
+      <h1>Contact Us</h1>
+    </div>
+  </div>
+  <main class="contact-main">
+    <div class="contact-cardwrap">
+      <form class="contact-form" autocomplete="off">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required placeholder="Enter your email">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Type your message..."></textarea>
+        <button type="submit">Send Message</button>
+        <div id="form-status" style="margin-top:9px;color:#259c6f;font-weight:500"></div>
+      </form>
+      <div class="contact-map">
+        <iframe class="map-frame" src="https://www.openstreetmap.org/export/embed.html?bbox=24.7371,59.4264,24.7847,59.4372&amp;layer=mapnik" title="Office Location"></iframe>
+        <span class="map-caption">GreenBite HQ, APIIT City</span>
+      </div>
+    </div>
+  </main>
+  <div class="faq-section">
+    <div class="faq-title">FAQ</div>
+    <div class="faq-item">
+      <div class="faq-question">What is GreenBite?</div>
+      <div class="faq-answer">GreenBite is your all-in-one wellness companion, providing healthy recipes, fitness tips, mindfulness activities, and wellness tools.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How to submit feedback?</div>
+      <div class="faq-answer">You can send your feedback through the contact form above or email us directly at hello@greenbite.com.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How is my information used?</div>
+      <div class="faq-answer">Your contact details are only used for responding to your inquiry and never shared without consent.</div>
+    </div>
+  </div>
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div>
+        <img src="favicon.png" alt="GreenBite Logo" class="footer-logo">
+        <span class="footer-title">GreenBite Wellness</span>
+      </div>
+      <form class="newsletter-form">
+        <label for="newsletter">Subscribe to our newsletter:</label>
+        <input type="email" id="newsletter" placeholder="Your Email">
+        <button type="submit">Sign Up</button>
+      </form>
+      <div class="sign-in-footer">
+        <a href="login.html" class="footer-link">Sign In</a>
+        <span>© 2025 GreenBite Wellness</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const form = document.querySelector(".contact-form");
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      form.reset();
+      document.getElementById("form-status").textContent = "Message sent! We'll get back to you soon.";
+      setTimeout(()=>{document.getElementById("form-status").textContent="";}, 3500);
+    });
+  </script>
+</body>
+</html>
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator | GreenBite</title>
+  <style>
+    /* your existing calculator styles ... */
+
+    /* ADD THIS AT THE END (just before </style>) */
+    @media (max-width: 700px) {
+      .main-form-card, .timer-card, .calculator-card, .main-content-card, .contact-cardwrap {
+        max-width: 96vw !important;
+        margin: 16px auto !important;
+        border-radius: 16px !important;
+        padding: 16px 3vw !important;
+        box-sizing: border-box !important;
+      }
+      .main-form-card h1, .calculator-card h1, .banner-content h1, .recipes-heading {
+        font-size: 1.6rem !important;
+        padding-top: 5px !important;
+        padding-bottom: 10px !important;
+      }
+      .main-form-card button, .calculator-card button, .mind-btn, .ambient-btn {
+        width: 100% !important;
+        font-size: 1.09em !important;
+        margin-bottom: 8px;
+        padding: 12px 0 !important;
+      }
+      .main-form-card input, .main-form-card select, .main-form-card textarea,
+      .calculator-card input, .calculator-card select, .calculator-card textarea {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+        font-size: 1em !important;
+        padding: 12px 7px !important;
+      }
+    }
+  </style>
+</head>
+
+
+
